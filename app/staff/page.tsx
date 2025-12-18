@@ -133,6 +133,8 @@ const DirectorData = [
 export default function Staff() {
   return (
     <div>
+
+        {/* Executive Committee */}
         <div className="w-full border-b-2 border-gray-300 pb-4">
             <h1 className="text-center text-3xl font-bold">Executive Committee</h1>
         </div>
@@ -174,7 +176,9 @@ export default function Staff() {
                 </div>
             ))}
         </div>
-        <div className="w-full border-b-2 border-gray-300 pb-4">
+
+        {/* Board of Directors */}
+        <div className="w-full border-b-2 border-gray-300 pb-4 pt-8">
             <h1 className="text-center text-3xl font-bold">Board of Directors</h1>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
