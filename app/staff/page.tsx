@@ -3,70 +3,219 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import President from "@/images/staff/president.jpg";
 import test from "@/images/test.ico";
 
-const StaffData = [
+const ExecData = [
     {
         Name: "Ben",
         Title: "President of MSU Esports",
         Image: President,
-        Teams: ["Valorant White", "League of Legends Maroon"],
         info:
         [
             "Detroit, MI",
-            "Mechincal Engineering",
+            "Mechanical Engineering",
             "Junior",
         ]
-    }
+    },
+    {
+        Name: "Anna",
+        Title: "Vice President of Internal Affairs",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
+    {
+        Name: "Kaylie",
+        Title: "Vice President of External Affairs",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "Mechanical Engineering",
+            "Junior",
+        ]
+    },
+        {
+        Name: "Mann",
+        Title: "Secretary",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
+        {
+        Name: "Alex",
+        Title: "Treasurer",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
+        {
+        Name: "Brayden",
+        Title: "Esports Director",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
+]
+
+const DirectorData = [
+    {
+        Name: "Braxton",
+        Title: "Assistant Esports Director",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
+    {
+        Name: "Madi",
+        Title: "Media Director",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
+    {
+        Name: "Brooks",
+        Title: "Outreach Director",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
+    {
+        Name: "Gage",
+        Title: "Event Director",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
+    {
+        Name: "Jacob",
+        Title: "Stream Director",
+        Image: President,
+        info:
+        [
+            "Detroit, MI",
+            "English",
+            "Junior",
+        ]
+    },
 ]
 
 export default function Staff() {
   return (
-    <div className="w-full max-w-sm overflow-hidden bg-gradient-to-b from-red-900 to-red-800">
-        <Card>
-            {/* Image */}
-            <div className="relative w-full h-64">
-                <Image
-                    src={StaffData[0].Image}
-                    alt={`${StaffData[0].Name} - ${StaffData[0].Title}`}
-                    fill
-                    className="object-cover"
-                />
-            </div>
-
-            {/* Name & Title */}
-            <div className="bg-red-900 px-4 py-3 text-center">
-                <CardTitle className="font-bold text-lg text-white">{StaffData[0].Name}</CardTitle>
-                <CardHeader className="text-sm text-white">{StaffData[0].Title}</CardHeader>
-            </div>
-
-            {/* Teams */}
-            <div className="px-4 py-3 text-center">
-                <div className="space-y-1">
-                    <p className="text-black text-sm">
-                        {
-                            StaffData[0].Teams.map((team, index) => (
-                                <span key={index}>
-                                    {team}{index < StaffData[0].Teams.length - 1 ? ' / ' : ''}
-                                </span>
-                            ))
-                        }
-                    </p>
-                </div>
-            </div>
-
-            {/* Additional Info */}
-            <div className="px-4 py-4 space-y-2">
-                {
-                    StaffData[0].info.map((item, index) => (
-                        <div key={index}>
-                            <p className="text-black text-sm">
-                                <Image src={test} alt="Test Icon" className="inline-block w-4 h-4 mr-2" />
-                                {item}
-                            </p>
+    <div>
+        <div className="w-full border-b-2 border-gray-300 pb-4">
+            <h1 className="text-center text-3xl font-bold">Executive Committee</h1>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
+            {ExecData.map((staff, index) => (
+                <div key={index} className="overflow-visible bg-gradient-to-b from-red-900 to-red-800 rounded-lg w-full max-w-sm mx-auto shadow-lg">
+                    <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-red-900">
+                        
+                        {/* Image */}
+                        <div className="relative w-full h-48 sm:h-56 lg:h-64 overflow-visible rounded-t-lg">
+                            <Image
+                                src={staff.Image}
+                                alt={`${staff.Name} - ${staff.Title}`}
+                                fill
+                                className="object-cover rounded-t-lg"
+                            />
+                            
+                            {/* Name & Title Overlay */}
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4/5 bg-white px-2 sm:px-4 py-2 sm:py-3 text-center rounded-lg">
+                                <CardTitle className="font-bold text-base sm:text-lg text-black">{staff.Name}</CardTitle>
+                                <CardHeader className="text-xs sm:text-sm text-black">{staff.Title}</CardHeader>
+                            </div>
                         </div>
-                    ))
-                }
-            </div>
-        </Card>
+
+                        {/* Additional Info */}
+                        <div className="px-2 sm:px-4 py-3 sm:py-4 space-y-2 bg-red-900 rounded-b-lg mt-8">
+                            {
+                                staff.info.map((item, index) => (
+                                    <div key={index}>
+                                        <p className="text-white text-sm">
+                                            <Image src={test} alt="Test Icon" className="inline-block w-4 h-4 mr-2" />
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </Card>
+                </div>
+            ))}
+        </div>
+        <div className="w-full border-b-2 border-gray-300 pb-4">
+            <h1 className="text-center text-3xl font-bold">Board of Directors</h1>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
+            {DirectorData.map((staff, index) => (
+                <div key={index} className="overflow-visible bg-gradient-to-b from-red-900 to-red-800 rounded-lg w-full max-w-sm mx-auto shadow-lg">
+                    <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-red-900">
+                        
+                        {/* Image */}
+                        <div className="relative w-full h-48 sm:h-56 lg:h-64 overflow-visible rounded-t-lg">
+                            <Image
+                                src={staff.Image}
+                                alt={`${staff.Name} - ${staff.Title}`}
+                                fill
+                                className="object-cover rounded-t-lg"
+                            />
+                            
+                            {/* Name & Title Overlay */}
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4/5 bg-white px-2 sm:px-4 py-2 sm:py-3 text-center rounded-lg">
+                                <CardTitle className="font-bold text-base sm:text-lg text-black">{staff.Name}</CardTitle>
+                                <CardHeader className="text-xs sm:text-sm text-black">{staff.Title}</CardHeader>
+                            </div>
+                        </div>
+
+                        {/* Additional Info */}
+                        <div className="px-2 sm:px-4 py-3 sm:py-4 space-y-2 bg-red-900 rounded-b-lg mt-8">
+                            {
+                                staff.info.map((item, index) => (
+                                    <div key={index}>
+                                        <p className="text-white text-sm">
+                                            <Image src={test} alt="Test Icon" className="inline-block w-4 h-4 mr-2" />
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </Card>
+                </div>
+            ))}
+        </div>
     </div>
+
   );
 }
