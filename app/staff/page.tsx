@@ -133,14 +133,13 @@ const DirectorData = [
 export default function Staff() {
   return (
     <div>
-
         {/* Executive Committee */}
-        <div className="w-full border-b-2 border-gray-300 pb-4">
+        <section className="w-full border-b-2 border-gray-300 pb-4">
             <h1 className="text-center text-3xl font-bold">Executive Committee</h1>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
+        </section>
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
             {ExecData.map((staff, index) => (
-                <div key={index} className="overflow-visible bg-gradient-to-b from-red-900 to-red-800 rounded-lg w-full max-w-sm mx-auto shadow-lg">
+                <div key={index} className="overflow-visible bg-linear-to-b from-red-900 to-red-800 rounded-lg w-full max-w-sm mx-auto shadow-lg">
                     <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-red-900">
                         
                         {/* Image */}
@@ -175,15 +174,15 @@ export default function Staff() {
                     </Card>
                 </div>
             ))}
-        </div>
+        </section>
 
         {/* Board of Directors */}
-        <div className="w-full border-b-2 border-gray-300 pb-4 pt-8">
+        <section className="w-full border-b-2 border-gray-300 pb-4 pt-8">
             <h1 className="text-center text-3xl font-bold">Board of Directors</h1>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
+        </section>
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
             {DirectorData.map((staff, index) => (
-                <div key={index} className="overflow-visible bg-gradient-to-b from-red-900 to-red-800 rounded-lg w-full max-w-sm mx-auto shadow-lg">
+                <div key={index} className="overflow-visible bg-linear-to-b from-red-900 to-red-800 rounded-lg w-full max-w-sm mx-auto shadow-lg">
                     <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-red-900">
                         
                         {/* Image */}
@@ -218,7 +217,7 @@ export default function Staff() {
                     </Card>
                 </div>
             ))}
-        </div>
+        </section>
     </div>
 
   );

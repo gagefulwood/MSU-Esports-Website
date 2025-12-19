@@ -120,3 +120,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .btn-primary {
+    @apply px-8 py-3 cursor-pointer bg-white text-[#6B2D2D] font-bold rounded-lg hover:bg-gray-100 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 cursor-pointer bg-white text-black font-bold rounded-lg hover:bg-gray-100 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+}
