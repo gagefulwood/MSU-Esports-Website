@@ -1,132 +1,5 @@
 import StaffCard from "@/components/staffCard";
-import President from "@/images/staff/president.jpg";
-
-const ExecData = [
-    {
-        Name: "Ben",
-        Title: "President of MSU Esports",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "Mechanical Engineering",
-            "Junior",
-        ]
-    },
-    {
-        Name: "Anna",
-        Title: "Vice President of Internal Affairs",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-    {
-        Name: "Kaylie",
-        Title: "Vice President of External Affairs",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "Mechanical Engineering",
-            "Junior",
-        ]
-    },
-        {
-        Name: "Mann",
-        Title: "Secretary",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-        {
-        Name: "Alex",
-        Title: "Treasurer",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-        {
-        Name: "Brayden",
-        Title: "Esports Director",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-]
-
-const DirectorData = [
-    {
-        Name: "Braxton",
-        Title: "Assistant Esports Director",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-    {
-        Name: "Madi",
-        Title: "Media Director",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-    {
-        Name: "Brooks",
-        Title: "Outreach Director",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-    {
-        Name: "Gage",
-        Title: "Event Director",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-    {
-        Name: "Jacob",
-        Title: "Stream Director",
-        Image: President,
-        info:
-        [
-            "Detroit, MI",
-            "English",
-            "Junior",
-        ]
-    },
-]
+import { STAFF_LIST } from "@/data/staff";
 
 export default function Staff() {
   return (
@@ -146,9 +19,11 @@ export default function Staff() {
           <div className="w-16 h-1 bg-[#5D1725] rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {ExecData.map((staff, index) => (
-            <StaffCard key={index} staff={staff} />
-          ))}
+          {
+            STAFF_LIST.filter(staff => staff.level === 'Executive Committee').map((staff, index) => (
+              <StaffCard key={index} staff={staff} />
+            ))
+          }
         </div>
       </section>
 
@@ -159,9 +34,11 @@ export default function Staff() {
           <div className="w-16 h-1 bg-[#5D1725] rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {DirectorData.map((staff, index) => (
-            <StaffCard key={index} staff={staff} />
-          ))}
+          {
+            STAFF_LIST.filter(staff => staff.level === 'Board of Directors').map((staff, index) => (
+              <StaffCard key={index} staff={staff} />
+            ))
+          }
         </div>
       </section>
     </div>

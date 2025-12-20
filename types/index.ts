@@ -1,6 +1,6 @@
 export type StudentClass = 'Freshman' | 'Sophomore' | 'Junior' | 'Senior' | 'Graduate';
 export type StaffLevel = 'Board of Directors' | 'Executive Committee';
-export type Department = 'Media' | 'Broadcasting' | 'Events' | 'Outreach' | 'Esports';
+export type Department = 'Media' | 'Broadcasting' | 'Events' | 'Outreach' | 'Esports' | 'Leadership';
 export type TeamTier = 'Maroon' | 'White' | 'Black';
 
 export interface Member {
@@ -12,9 +12,11 @@ export interface Member {
 
 export interface Staff {
     memberId: string;
+    name: string,
     role: string;
     department: Department;
     level: StaffLevel;
+    imageUrl: string;
 }
 
 export interface Team {
