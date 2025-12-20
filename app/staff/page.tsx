@@ -1,7 +1,5 @@
-import Image from "next/image";
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import StaffCard from "@/components/staffCard";
 import President from "@/images/staff/president.jpg";
-import test from "@/images/test.ico";
 
 const ExecData = [
     {
@@ -219,6 +217,5 @@ export default function Staff() {
             ))}
         </section>
     </div>
-
   );
 }
