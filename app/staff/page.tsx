@@ -139,8 +139,8 @@ export default function Staff() {
         </section>
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
             {ExecData.map((staff, index) => (
-                <div key={index} className="overflow-visible bg-linear-to-b from-red-900 to-red-800 rounded-lg w-full max-w-sm mx-auto shadow-lg">
-                    <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-red-900">
+                <div key={index} className="overflow-visible bg-linear-to-b from-[#5D1725] to-[#5D1725] rounded-lg w-full max-w-sm mx-auto shadow-lg">
+                    <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-[#5D1725]">
                         
                         {/* Image */}
                         <div className="relative w-full h-48 sm:h-56 lg:h-64 overflow-visible rounded-t-lg">
@@ -159,7 +159,7 @@ export default function Staff() {
                         </div>
 
                         {/* Additional Info */}
-                        <div className="px-2 sm:px-4 py-3 sm:py-4 space-y-2 bg-red-900 rounded-b-lg mt-8">
+                        <div className="px-2 sm:px-4 py-3 sm:py-4 space-y-2 bg-[#5D1725] rounded-b-lg mt-8">
                             {
                                 staff.info.map((item, index) => (
                                     <div key={index}>
@@ -182,8 +182,8 @@ export default function Staff() {
         </section>
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
             {DirectorData.map((staff, index) => (
-                <div key={index} className="overflow-visible bg-linear-to-b from-red-900 to-red-800 rounded-lg w-full max-w-sm mx-auto shadow-lg">
-                    <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-red-900">
+                <div key={index} className="overflow-visible bg-linear-to-b from-[#5D1725] to-[#5D1725] rounded-lg w-full max-w-sm mx-auto shadow-lg">
+                    <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-[#5D1725]">
                         
                         {/* Image */}
                         <div className="relative w-full h-48 sm:h-56 lg:h-64 overflow-visible rounded-t-lg">
@@ -202,7 +202,7 @@ export default function Staff() {
                         </div>
 
                         {/* Additional Info */}
-                        <div className="px-2 sm:px-4 py-3 sm:py-4 space-y-2 bg-red-900 rounded-b-lg mt-8">
+                        <div className="px-2 sm:px-4 py-3 sm:py-4 space-y-2 bg-[#5D1725] rounded-b-lg mt-8">
                             {
                                 staff.info.map((item, index) => (
                                     <div key={index}>
