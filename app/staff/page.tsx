@@ -130,41 +130,92 @@ const DirectorData = [
 
 export default function Staff() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
-        
-      {/* Header */}
-      <section className="bg-linear-to-r from-[#5D1725] to-[#3a0f17] py-12 sm:py-16 mb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white text-center">Staff</h1>
-          <p className="text-[#DAC79D] text-center mt-2 text-sm sm:text-base">Meet the MSU Esports leadership team</p>
-        </div>
-      </section>
+    <div>
+        {/* Executive Committee */}
+        <section className="w-full border-b-2 border-gray-300 pb-4">
+            <h1 className="text-center text-3xl font-bold">Executive Committee</h1>
+        </section>
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
+            {ExecData.map((staff, index) => (
+                <div key={index} className="overflow-visible bg-linear-to-b from-[#5D1725] to-[#5D1725] rounded-lg w-full max-w-sm mx-auto shadow-lg">
+                    <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-[#5D1725]">
+                        
+                        {/* Image */}
+                        <div className="relative w-full h-48 sm:h-56 lg:h-64 overflow-visible rounded-t-lg">
+                            <Image
+                                src={staff.Image}
+                                alt={`${staff.Name} - ${staff.Title}`}
+                                fill
+                                className="object-cover rounded-t-lg"
+                            />
+                            
+                            {/* Name & Title Overlay */}
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4/5 bg-white px-2 sm:px-4 py-2 sm:py-3 text-center rounded-lg">
+                                <CardTitle className="font-bold text-base sm:text-lg text-black">{staff.Name}</CardTitle>
+                                <CardHeader className="text-xs sm:text-sm text-black">{staff.Title}</CardHeader>
+                            </div>
+                        </div>
 
-      {/* Executive Committee */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Executive Committee</h2>
-          <div className="w-16 h-1 bg-[#5D1725] rounded-full"></div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {ExecData.map((staff, index) => (
-            <StaffCard key={index} staff={staff} />
-          ))}
-        </div>
-      </section>
+                        {/* Additional Info */}
+                        <div className="px-2 sm:px-4 py-3 sm:py-4 space-y-2 bg-[#5D1725] rounded-b-lg mt-8">
+                            {
+                                staff.info.map((item, index) => (
+                                    <div key={index}>
+                                        <p className="text-white text-sm">
+                                            <Image src={test} alt="Test Icon" className="inline-block w-4 h-4 mr-2" />
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </Card>
+                </div>
+            ))}
+        </section>
 
-      {/* Board of Directors */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Board of Directors</h2>
-          <div className="w-16 h-1 bg-[#5D1725] rounded-full"></div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {DirectorData.map((staff, index) => (
-            <StaffCard key={index} staff={staff} />
-          ))}
-        </div>
-      </section>
+        {/* Board of Directors */}
+        <section className="w-full border-b-2 border-gray-300 pb-4 pt-8">
+            <h1 className="text-center text-3xl font-bold">Board of Directors</h1>
+        </section>
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4 pb-4 px-2 sm:px-4">
+            {DirectorData.map((staff, index) => (
+                <div key={index} className="overflow-visible bg-linear-to-b from-[#5D1725] to-[#5D1725] rounded-lg w-full max-w-sm mx-auto shadow-lg">
+                    <Card className="py-0 gap-0 overflow-visible rounded-lg shadow-lg bg-[#5D1725]">
+                        
+                        {/* Image */}
+                        <div className="relative w-full h-48 sm:h-56 lg:h-64 overflow-visible rounded-t-lg">
+                            <Image
+                                src={staff.Image}
+                                alt={`${staff.Name} - ${staff.Title}`}
+                                fill
+                                className="object-cover rounded-t-lg"
+                            />
+                            
+                            {/* Name & Title Overlay */}
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4/5 bg-white px-2 sm:px-4 py-2 sm:py-3 text-center rounded-lg">
+                                <CardTitle className="font-bold text-base sm:text-lg text-black">{staff.Name}</CardTitle>
+                                <CardHeader className="text-xs sm:text-sm text-black">{staff.Title}</CardHeader>
+                            </div>
+                        </div>
+
+                        {/* Additional Info */}
+                        <div className="px-2 sm:px-4 py-3 sm:py-4 space-y-2 bg-[#5D1725] rounded-b-lg mt-8">
+                            {
+                                staff.info.map((item, index) => (
+                                    <div key={index}>
+                                        <p className="text-white text-sm">
+                                            <Image src={test} alt="Test Icon" className="inline-block w-4 h-4 mr-2" />
+                                            {item}
+                                        </p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </Card>
+                </div>
+            ))}
+        </section>
     </div>
   );
 }

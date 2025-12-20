@@ -24,3 +24,11 @@ export interface Team {
     roster: string[];
     captainId: string;
 }
+
+export interface VideoPlayerProps {
+  src: string;
+  poster?: string;
+  autoPlay?: boolean;
+  muted?: boolean;
+  loop?: boolean;
+}
