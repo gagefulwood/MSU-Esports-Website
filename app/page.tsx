@@ -34,7 +34,7 @@ export default function Home() {
       <section className="w-full py-20 bg-linear-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Our Games</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Our Teams</h2>
             <div className="w-20 h-1.5 bg-[#5D1725] rounded-full mx-auto"></div>
           </div>
           <GamesCarousel />
